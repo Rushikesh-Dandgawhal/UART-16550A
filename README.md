@@ -126,13 +126,13 @@ tb/
 
 | Testbench | What I checked | Result |
 |---|---|---:|
-| `reset_tb.sv` | Reset behavior and initial outputs | **9/9 PASS** |
-| `register_tb.sv` | DLL, DLM, LCR, IER and MCR | **10/10 PASS** |
-| `rx_parity_tb.sv` | Receive `0x55` with odd parity | **4/4 PASS** |
-| `parity_error_tb.sv` | Wrong parity, RLS interrupt | **5/5 PASS** |
-| `framing_error_tb.sv` | Bad stop bit / framing error | **Testbench created** |
-| `modem_status_tb.sv` | MCR, MSR and CTS delta behavior | **9/9 PASS** |
-| `interrupt_priority_tb.sv` | RLS interrupt priority | **4/4 PASS** |
+| `reset_tb.sv` | Reset behavior and initial outputs |
+| `register_tb.sv` | DLL, DLM, LCR, IER and MCR |
+| `rx_parity_tb.sv` | Receive `0x55` with odd parity |
+| `parity_error_tb.sv` | Wrong parity, RLS interrupt |
+| `framing_error_tb.sv` | Bad stop bit / framing error |
+| `modem_status_tb.sv` | MCR, MSR and CTS delta behavior |
+| `interrupt_priority_tb.sv` | RLS interrupt priority |
 
 The checks are generated from the actual DUT outputs. I am using the testbenches to drive the design and compare the resulting behavior rather than forcing internal signals just to obtain a passing result.
 
@@ -211,13 +211,6 @@ IRQ = 1
 ## Simulation
 
 I use **ModelSim** for RTL simulation and waveform inspection.
-
-A typical simulation looks like:
-
-```tcl
-vsim work.register_tb
-run -all
-```
 
 The individual testbenches can be run separately depending on which part of the UART I want to verify.
 
