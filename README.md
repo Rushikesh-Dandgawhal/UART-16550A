@@ -124,8 +124,8 @@ tb/
 
 ### Tests Completed
 
-| Testbench | What I checked | Result |
-|---|---|---:|
+| Testbench | What I checked |
+|---|---|
 | `reset_tb.sv` | Reset behavior and initial outputs |
 | `register_tb.sv` | DLL, DLM, LCR, IER and MCR |
 | `rx_parity_tb.sv` | Receive `0x55` with odd parity |
